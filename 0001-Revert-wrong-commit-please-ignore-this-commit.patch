@@ -1,0 +1,22 @@
+From bc7bcb04b83a2e4968591a44ca3cba4da206cbcf Mon Sep 17 00:00:00 2001
+From: Himansi <himansi@gmail.com>
+Date: Wed, 18 Feb 2026 10:28:33 +0530
+Subject: [PATCH] Revert "wrong commit (please ignore this commit )
+
+This reverts commit ed4645efecfe01b1cec8b0d2444477f933ccb931.
+---
+ revertfile | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/revertfile b/revertfile
+index eb4e141..831f0b2 100644
+--- a/revertfile
++++ b/revertfile
+@@ -1,4 +1,3 @@
+-paneer
+ mashroom
+ garam masala
+ mirch
+-- 
+2.43.0
+
