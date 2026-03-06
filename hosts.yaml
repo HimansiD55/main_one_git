@@ -1,0 +1,48 @@
+all:
+  children:
+    basic_oraclelinux:
+      children:
+        managed_oraclelinux: null
+      hosts: {}
+    basic_ubuntu:
+      children:
+        managed_ubuntu: null
+      hosts: {}
+    classic_oraclelinux:
+      hosts: {}
+    classic_ubuntu:
+      hosts: {}
+    managed_oraclelinux:
+      children:
+        classic_oraclelinux: null
+      hosts: {}
+    managed_ubuntu:
+      children:
+        classic_ubuntu: null
+        xyz_prod: null
+        xyz_dev: null
+      hosts:
+        abcprd-11.sub.domain.com: null
+        abcprd-12.sub.domain.com: null
+        abcprd-21.sub.domain.com: null
+        abcprd-22.sub.domain.com: null
+        zxcprd-11.sub.domain.com: null
+        zxcprd-12.sub.domain.com: null
+        zxcprd-21.sub.domain.com: null
+        zxcprd-22.sub.domain.com: null
+        amiprd-11.sub.domain.com: null
+        amiprd-12.sub.domain.com: null
+        amiprd-21.sub.domain.com: null
+        amiprd-22.sub.domain.com: null
+        ogwebhost1.osgoode.domain.com: null
+        snsinfo.sub.domain.com: null
+    xyz_prod:
+      hosts:
+        amiprd-11.sub.domain.com: null
+        amiprd-21.sub.domain.com: null
+    xyz_dev:
+      hosts:
+        pmwebdev-11.sub.domain.com: null
+        pmwebdev-12.sub.domain.com: null
+        pmwebdev-21.sub.domain.com: null
+        pmwebdev-22.sub.domain.com: null

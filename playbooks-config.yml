@@ -1,0 +1,36 @@
+basic_oraclelinux:
+  playbooks:
+  - core-system-configure.yml
+basic_ubuntu:
+  playbooks:
+  - core-system-configure.yml
+classic_oraclelinux:
+  parent_groups:
+  - managed_oraclelinux
+  playbooks:
+  - classic.yml
+classic_ubuntu:
+  parent_groups:
+  - managed_ubuntu
+  playbooks:
+  - classic.yml
+managed_oraclelinux:
+  parent_groups:
+  - basic_oraclelinux
+  playbooks:
+  - managed-system-configure.yml
+managed_ubuntu:
+  parent_groups:
+  - basic_ubuntu
+  playbooks:
+  - managed-system-configure.yml
+xyz_pmiprd:
+   parent_groups :
+     - managed_ubuntu
+   playbooks:
+     - xyz_pmiprd.yml
+xyz_pmwebdev:
+   parent_groups :
+     - managed_ubuntu
+   playbooks:
+     - xyz_pmwebdev.yml
